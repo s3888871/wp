@@ -17,12 +17,24 @@
         <img src="replace-me.png" alt="Lunardo Cinema Logo">
         <h1>Lunardo Cinema</h1>
     </header>
-    <nav>
-      
+    <nav id="navbar">
+        <a href="#reopening">Reopening</a>
+        <a href="#seats">New Seats</a>
+        <a href="#system-upgrade">System Upgrade</a>
     </nav>
-
     <main>
-     
+        <section id="reopening">
+            <h2>Grand Reopening</h2>
+            <p>Place holder text</p>
+        </section>
+        <section id="seats">
+            <h2>Experience Ultimate Comfort</h2>
+            <p>Place holder text.</p>
+        </section>
+        <section id="system-upgrade">
+            <h2>Upgraded Projection and Sound Systems</h2>
+            <p>Place holder text.</p>
+        </section>
     </main>
 
     <footer>
