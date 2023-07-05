@@ -14,9 +14,9 @@
   <body>
 
     <header>
-      Lunardo
+        <img src="replace-me.png" alt="Lunardo Cinema Logo">
+        <h1>Lunardo Cinema</h1>
     </header>
-
     <nav>
       
     </nav>
