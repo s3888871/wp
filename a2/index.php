@@ -14,7 +14,7 @@
   <body>
 
     <header>
-        <img src="shutterstock-cinema.png" alt="Lunardo Cinema Logo">
+        <img src="../media/shutterstock-cinema.png" alt="Lunardo Cinema Logo">
         <h1>Lunardo Cinema</h1>
     </header>
     <nav id="navbar">
