@@ -13,7 +13,6 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Great Vibes', cursive;
 }
 
-
 header {
     width: 100%;
     height: 70px;
@@ -55,6 +54,35 @@ main section {
     padding: 20px;
     box-sizing: border-box;
 }
+
+table {
+    border:none;
+    border-collapse: collapse;
+    width:90%;
+    margin: 0 auto;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+
+table thead {
+    background-color: #9BCDD2;
+    
+}
+
+
+table td {
+    background-color: #FAF0E4;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+
+
 
 
 
