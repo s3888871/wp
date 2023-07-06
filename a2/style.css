@@ -1,1 +1,30 @@
-/* Insert your styles here */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Great+Vibes&display=swap');
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Great Vibes', cursive;
+}
+
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+
+
+
