@@ -85,6 +85,11 @@ table td {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
 }
+@media (min-width: 992px) {
+
+}
+
+
 
 div.movie-panel {
     box-sizing: border-box;
@@ -98,7 +103,7 @@ div.movie-panel {
 }
 
 div.movie-panel img {
-    max-width:100%;
+    max-width: 100%;
     max-height: 100%;
 }
 

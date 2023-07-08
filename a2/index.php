@@ -103,13 +103,13 @@
             </div>
             <div class="movie-panel" tabindex="1">
                 <div>
-                    <h3>Barbie.</h3>
+                    <h3>Oppenheimer.</h3>
                     <h4>Rating: PG</h4>
-                    <img src="/~s3888871/media/Barbie-poster.PNG" alt="Barbie Poster">
+                    <img src="/~s3888871/media/Oppenheimer-poster.PNG" alt="oppenheimer Poster">
                 </div>
 
                 <div>
-                    <p>Barbie Story Synopsis. Replace and add full synopsis</p>
+                    <p>Oppenheimer Story Synopsis. Replace and add full synopsis</p>
                     <ul>
                         <li> 10 July 2023 - 10 am</li>
                         <li> 11 July 2023 - 10 am</li>
@@ -121,13 +121,13 @@
             </div>
             <div class="movie-panel" tabindex="2">
                 <div>
-                    <h3>Barbie.</h3>
-                    <h4>Rating: PG</h4>
-                    <img src="/~s3888871/media/Barbie-poster.PNG" alt="Barbie Poster">
+                    <h3>Indiana Jones.</h3>
+                    <h4>Rating: M</h4>
+                    <img src="/~s3888871/media/indiana-jones-poster.PNG" alt="indiana Poster">
                 </div>
 
                 <div>
-                    <p>Barbie Story Synopsis. Replace and add full synopsis</p>
+                    <p>Indiana Jones Story Synopsis. Replace and add full synopsis</p>
                     <ul>
                         <li> 10 July 2023 - 10 am</li>
                         <li> 11 July 2023 - 10 am</li>
@@ -139,13 +139,13 @@
             </div>
             <div class="movie-panel" tabindex="3">
                 <div>
-                    <h3>Barbie.</h3>
+                    <h3>Teenage Mutant Ninja Turtles.</h3>
                     <h4>Rating: PG</h4>
-                    <img src="/~s3888871/media/Barbie-poster.PNG" alt="Barbie Poster">
+                    <img src="/~s3888871/media/TMNT-poster.PNG" alt="TMNT Poster">
                 </div>
 
                 <div>
-                    <p>Barbie Story Synopsis. Replace and add full synopsis</p>
+                    <p>TMNT Story Synopsis. Replace and add full synopsis</p>
                     <ul>
                         <li> 10 July 2023 - 10 am</li>
                         <li> 11 July 2023 - 10 am</li>
