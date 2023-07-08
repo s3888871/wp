@@ -8,6 +8,10 @@ body {
     padding: 0;
     background-color: #F5F5F5;
 }
+header, nav, main, footer {
+  margin: 0 auto;
+  max-width: 1200px;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Great Vibes', cursive;
@@ -145,18 +149,22 @@ footer {
 }
 
 div.title-rating {
+    margin: 1%;
     padding-left: 20px;
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
-     div.movie-panel {
-        width: 50%;
+
+@media (max-width: 600px) {
+    div.movie-panel > div {
+        display: flex;
+        align-items: center;
     }
+
     div.movie-panel img {
         width: 100%;
     }
-    div.movie-panel h3,
-    div.movie-panel h4 {
+
+    div.movie-panel > div > .title-rating {
         width: 100%;
     }
 }
@@ -167,13 +175,11 @@ div.title-rating {
     }
 
     div.movie-panel img {
-        width: 50%;
+        width: 100%;
     }
 
     div.movie-panel > div > .title-rating {
-        width: 50%;
+        width: 100%;
     }
 }
-@media (min-width: 993px) and (max-width: 10000000px){
 
-}
