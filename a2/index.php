@@ -81,13 +81,13 @@
             </table>
         </div>
         </section>
-        <section id="now-showing">
+        <section id="now-showing" class="clearfix">
             <h2>Now Showing</h2>
             <div class="movie-panel" tabindex="0">
                 <div>
                     <h3>Barbie.</h3>
                     <h4>Rating: PG</h4>
-                    <img src="/~s3888871/media/Barbie-poster.PNG" alt="Barbie Poster" width="250" height="400">
+                    <img src="/~s3888871/media/Barbie-poster.PNG" alt="Barbie Poster">
                 </div>
 
                 <div>
@@ -101,11 +101,47 @@
                     <a href="booking.php?movie=ACT">Book Now</a>
                 </div>
             </div>
-            <div class="movie-panel" tabindex="0">
+            <div class="movie-panel" tabindex="1">
                 <div>
                     <h3>Barbie.</h3>
                     <h4>Rating: PG</h4>
-                    <img src="/~s3888871/media/Barbie-poster.PNG" alt="Barbie Poster" width="250" height="400">
+                    <img src="/~s3888871/media/Barbie-poster.PNG" alt="Barbie Poster">
+                </div>
+
+                <div>
+                    <p>Barbie Story Synopsis. Replace and add full synopsis</p>
+                    <ul>
+                        <li> 10 July 2023 - 10 am</li>
+                        <li> 11 July 2023 - 10 am</li>
+                        <li> 12 July 2023 - 10 am</li>
+                        <li> 13 July 2023 - 10 am</li>
+                    </ul>
+                    <a href="booking.php?movie=ACT">Book Now</a>
+                </div>
+            </div>
+            <div class="movie-panel" tabindex="2">
+                <div>
+                    <h3>Barbie.</h3>
+                    <h4>Rating: PG</h4>
+                    <img src="/~s3888871/media/Barbie-poster.PNG" alt="Barbie Poster">
+                </div>
+
+                <div>
+                    <p>Barbie Story Synopsis. Replace and add full synopsis</p>
+                    <ul>
+                        <li> 10 July 2023 - 10 am</li>
+                        <li> 11 July 2023 - 10 am</li>
+                        <li> 12 July 2023 - 10 am</li>
+                        <li> 13 July 2023 - 10 am</li>
+                    </ul>
+                    <a href="booking.php?movie=ACT">Book Now</a>
+                </div>
+            </div>
+            <div class="movie-panel" tabindex="3">
+                <div>
+                    <h3>Barbie.</h3>
+                    <h4>Rating: PG</h4>
+                    <img src="/~s3888871/media/Barbie-poster.PNG" alt="Barbie Poster">
                 </div>
 
                 <div>
@@ -123,6 +159,7 @@
     </main>
 
     <footer>
+
       <div>&copy;<script>
         document.write(new Date().getFullYear());
       </script>Joshua Telfer, S3888871. GitHub: https://github.com/s3888871/wp Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
