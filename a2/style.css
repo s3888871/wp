@@ -88,11 +88,12 @@ div.movie-panel {
     box-sizing: border-box;
     height: 400px;
     width: 250px;
-    margin: 3%
+    margin: 3%;
     padding: 5px;
     perspective: 1000px;
     position: relative;
 }
+
 div.movie-panel > div {
     height: calc(100% - 10px);
     width: calc(100% - 10px);
@@ -100,21 +101,25 @@ div.movie-panel > div {
     padding: 5px 10px;
     position: absolute;
     backface-visibility: hidden;
+    transition: 3s;
+    -webkit-backface-visibility: hidden;
 
 }
 
-
-
-div.movie-panel > div {
-  transition: 3s;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-
+div.movie-panel > div:nth-child(1) {
+    transform: rotateY(0deg);
+    z-index: 2;
 }
+
+div.movie-panel > div:nth-child(2) {
+    transform: rotateY(-180deg);
+}
+
 div.movie-panel:hover > div:nth-child(1) {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
+
 div.movie-panel:hover > div:nth-child(2) {
-  transform: rotateY(360deg);
+    transform: rotateY(0deg);
 }
 
