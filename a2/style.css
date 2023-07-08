@@ -84,8 +84,16 @@ table td {
     border-bottom: 1px solid #000;
 }
 
-
-
+posters {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+poster1 {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 
 
