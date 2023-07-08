@@ -86,24 +86,35 @@ table td {
 
 div.movie-panel {
     box-sizing: border-box;
-    height: 300px;
-    width: 45%;
+    height: 400px;
+    width: 250px;
     margin: 3%
     padding: 5px;
+    perspective: 1000px;
+    position: relative;
 }
-div.movie-panel > div:nth-child(1) {
-  border: 4px red groove;
-}
-div.movie-panel > div:nth-child(2) {
-  border: 4px blue groove;
-}
-
-
-div.front3D {
+div.movie-panel > div {
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    box-sizing: border-box;
+    padding: 5px 10px;
+    position: absolute;
+    backface-visibility: hidden;
 
 }
 
-div.back3D {
 
+
+div.movie-panel > div {
+  transition: 3s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+}
+div.movie-panel:hover > div:nth-child(1) {
+  transform: rotateY(180deg);
+}
+div.movie-panel:hover > div:nth-child(2) {
+  transform: rotateY(360deg);
 }
 
