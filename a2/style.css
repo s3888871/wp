@@ -85,9 +85,7 @@ table td {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
 }
-@media (min-width: 992px) {
 
-}
 
 
 
@@ -146,12 +144,36 @@ footer {
   clear: both;
 }
 
-@media (max-width: 600px) {
+div.title-rating {
+    padding-left: 20px;
+}
 
+@media (min-width: 0px) and (max-width: 600px) {
+     div.movie-panel {
+        width: 50%;
+    }
+    div.movie-panel img {
+        width: 100%;
+    }
+    div.movie-panel h3,
+    div.movie-panel h4 {
+        width: 100%;
+    }
 }
 @media (min-width: 601px) and (max-width: 992px) {
+      div.movie-panel > div {
+        display: flex;
+        align-items: center;
+    }
 
+    div.movie-panel img {
+        width: 50%;
+    }
+
+    div.movie-panel > div > .title-rating {
+        width: 50%;
+    }
 }
-@media (min-width: 993px) {
+@media (min-width: 993px) and (max-width: 10000000px){
 
 }

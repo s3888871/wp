@@ -85,8 +85,10 @@
             <h2>Now Showing</h2>
             <div class="movie-panel" tabindex="0">
                 <div>
+                <div class="title-rating">
                     <h3>Barbie.</h3>
                     <h4>Rating: PG</h4>
+                    </div>
                     <img src="/~s3888871/media/Barbie-poster.PNG" alt="Barbie Poster">
                 </div>
 
@@ -103,8 +105,10 @@
             </div>
             <div class="movie-panel" tabindex="1">
                 <div>
+                <div class="title-rating">
                     <h3>Oppenheimer.</h3>
                     <h4>Rating: PG</h4>
+                    </div>
                     <img src="/~s3888871/media/Oppenheimer-poster.PNG" alt="oppenheimer Poster">
                 </div>
 
@@ -121,8 +125,10 @@
             </div>
             <div class="movie-panel" tabindex="2">
                 <div>
+                <div class="title-rating">
                     <h3>Indiana Jones.</h3>
                     <h4>Rating: M</h4>
+                    </div>
                     <img src="/~s3888871/media/indiana-jones-poster.PNG" alt="indiana Poster">
                 </div>
 
@@ -139,9 +145,12 @@
             </div>
             <div class="movie-panel" tabindex="3">
                 <div>
+                    <div class="title-rating">
                     <h3>Teenage Mutant Ninja Turtles.</h3>
                     <h4>Rating: PG</h4>
+                    </div>
                     <img src="/~s3888871/media/TMNT-poster.PNG" alt="TMNT Poster">
+
                 </div>
 
                 <div>
