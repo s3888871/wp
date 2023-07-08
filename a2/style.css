@@ -92,6 +92,7 @@ div.movie-panel {
     padding: 5px;
     perspective: 1000px;
     position: relative;
+    float: left;
 }
 
 div.movie-panel > div {
@@ -115,11 +116,11 @@ div.movie-panel > div:nth-child(2) {
     transform: rotateY(-180deg);
 }
 
-div.movie-panel:hover > div:nth-child(1) {
+div.movie-panel:focus > div:nth-child(1) {
     transform: rotateY(180deg);
 }
 
-div.movie-panel:hover > div:nth-child(2) {
+div.movie-panel:focus > div:nth-child(2) {
     transform: rotateY(0deg);
 }
 
