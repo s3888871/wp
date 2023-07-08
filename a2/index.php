@@ -83,13 +83,22 @@
         </section>
         <section id="now-showing">
             <h2>Now Showing</h2>
-            <div class="posters">
-                <div class="poster1">
+            <div class="movie-panel">
+                <div class="front">
                     <img src="/~s3888871/media/Barbie-poster.PNG" alt="Barbie Poster" width="250" height="400">
+                    <h3>Barbie.</h3>
+                    <h4>Rating: PG</h4>
                 </div>
 
-                <div class="poster1">
-                    <p>Barbie. Rated PG.</p>
+                <div class="back">
+                    <p>Barbie Story Synopsis. Replace and add full synopsis</p>
+                    <ul>
+                        <li> 10 July 2023 - 10 am</li>
+                        <li> 11 July 2023 - 10 am</li>
+                        <li> 12 July 2023 - 10 am</li>
+                        <li> 13 July 2023 - 10 am</li>
+                    </ul>
+                    <a href="booking.php?movie=ACT">Book Now</a>
                 </div>
             </div>
         </section>
