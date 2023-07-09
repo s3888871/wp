@@ -10,7 +10,6 @@
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
     <script src='../wireframe.js'></script>
   </head>
-
   <body>
 
     <header>
@@ -19,15 +18,24 @@
         <h1>Lunardo Cinema</h1>
     </header>
     <nav id="navbar">
-        <a href="#reopening">Reopening</a>
-        <a href="#seats">New Seats</a>
-        <a href="#system-upgrade">System Upgrade</a>
+        <a href="#about-us">About Us</a>
+        <a href="#seats-prices">New Seats</a>
+        <a href="#now-showing">Now Showing</a>
     </nav>
     <main>
         <section id="about-us">
             <h2>About Us</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        </section>
+            <p>We are thrilled to announce the grand reopening of Lunardo Cinema! After lengthy renovations and improvements, we have redesigned our cinema aiming to keep our historic charm while providing a model movie-watching experience.</p>
+            <br>
+            <p>They key highlight of our redesign is the addition of luxurious seating options. Lunardo Cinema now has upgraded, reclinable standard seats, perfect for the casual movie-goer.
+            For those who crave the highest class of luxury, we have premium, all leather seats available for out first class customers.
+            </p>
+            <br>
+            <p>We have also made tremendous leaps in terms of our audio visual technology. Our silver screens now have cutting edge 3D Dolby Vision projection and Dolby Atmost sound. This creates and astonishing brightness and colour
+            while the Dolby Atmos sound system immerses you with its multi-dimensional sound system. These upgrades make for a truly immersive cinematic experience.</p>
+            <br>
+            <p>For more info on 3D Dolby Vision projection and Dolby Atmos sound, visit the Dolby website <a href="https://professional.dolby.com/cinema/" target="_blank">here</a> and <a href="https://professional.dolby.com/cinema/dolby-atmos" target="_blank">here</a>  </p>
+            </section>
         <section id="seats-prices">
             <h2>Seats and Prices</h2>
             <div id="table-seats-prices">
