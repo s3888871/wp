@@ -39,6 +39,7 @@
          <section id="seats-prices">
            <div class="seat-section">
               <h3>Standard Seats</h3>
+              <img src="/~s3888871/media/Profern-Standard-Twin.png" alt="Standard Seating Image">
               <div class="seat-details">
                  <table>
                     <thead>
@@ -74,6 +75,7 @@
            </div>
             <div class="seat-section">
                <h3>First Class Seats</h3>
+               <img src="/~s3888871/media/Profern-Verona-Twin.png" alt="First Class Seating Image">
                <div class="seat-details">
                   <table>
                      <thead>
