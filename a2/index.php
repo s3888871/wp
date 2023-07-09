@@ -37,45 +37,44 @@
          </section>
          <h2>Seats and Prices</h2>
          <section id="seats-prices">
-           <div class="seat-section">
-              <h3>Standard Seats</h3>
-              <img src="/~s3888871/media/Profern-Standard-Twin.png" alt="Standard Seating Image">
-              <div class="seat-details">
-                 <table>
-                    <thead>
-                       <tr>
-                          <th>Seat Type</th>
-                          <th>Seat Code</th>
-                          <th>Discounted Prices</th>
-                          <th>Normal Prices</th>
-                       </tr>
-                    </thead>
-                    <tbody>
-                       <tr>
-                          <td>Standard Adult</td>
-                          <td>STA</td>
-                          <td>16.00</td>
-                          <td>21.50</td>
-                       </tr>
-                       <tr>
-                          <td>Standard Concession</td>
-                          <td>STP</td>
-                          <td>14.50</td>
-                          <td>19.00</td>
-                       </tr>
-                       <tr>
-                          <td>Standard Child</td>
-                          <td>STC</td>
-                          <td>13.00</td>
-                          <td>17.50</td>
-                       </tr>
-                    </tbody>
-                 </table>
-              </div>
-           </div>
+            <div class="seat-section">
+               <h3>Standard Seats</h3>
+               <div class="seat-details">
+                  <table>
+                     <thead>
+                        <tr>
+                           <th>Seat Type</th>
+                           <th>Seat Code</th>
+                           <th>Discounted Prices</th>
+                           <th>Normal Prices</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Standard Adult</td>
+                           <td>STA</td>
+                           <td>16.00</td>
+                           <td>21.50</td>
+                        </tr>
+                        <tr>
+                           <td>Standard Concession</td>
+                           <td>STP</td>
+                           <td>14.50</td>
+                           <td>19.00</td>
+                        </tr>
+                        <tr>
+                           <td>Standard Child</td>
+                           <td>STC</td>
+                           <td>13.00</td>
+                           <td>17.50</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <img src="/~s3888871/media/Profern-Standard-Twin.png" class="seat-image" alt="Standard Seating Image">
+               </div>
+            </div>
             <div class="seat-section">
                <h3>First Class Seats</h3>
-               <img src="/~s3888871/media/Profern-Verona-Twin.png" alt="First Class Seating Image">
                <div class="seat-details">
                   <table>
                      <thead>
@@ -108,6 +107,7 @@
                      </tbody>
                   </table>
                </div>
+               <img src="/~s3888871/media/Profern-Verona-Twin.png" class="seat-image" alt="First Class Seating Image">
             </div>
          </section>
          <section id="now-showing" class="clearfix">
