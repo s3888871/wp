@@ -25,10 +25,10 @@ h1 {
 
 
 h2 {
-    font-size: 32px;
+    font-size: 38px;
 }
 h3 {
-    font-size: 22px;
+    font-size: 28px;
 }
 
 html {
@@ -106,6 +106,14 @@ table td {
     border-right: 1px solid #000;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
+}
+
+#seats-prices {
+
+}
+
+.seat-section{
+
 }
 
 
