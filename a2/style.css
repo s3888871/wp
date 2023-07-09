@@ -230,3 +230,12 @@ div.title-rating {
     }
 }
 
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #9BCDD2;
+  color: white;
+}
+
+
