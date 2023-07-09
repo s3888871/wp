@@ -20,7 +20,7 @@
       </nav>
       <h2>Barbie Booking</h2>
       <main>
-         <form action="booking.php" method="POST" >
+         <form action="booking.php" method="POST" class=center-form>
             <div class="radio-buttons">
                <div class ="column">
                   <input type="radio" id="mon1" name="day" value="mon-11am" data-pricing="discprice" hidden>
