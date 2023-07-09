@@ -236,6 +236,21 @@ div.title-rating {
   margin: 10px;
   background-color: #9BCDD2;
   color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+.radio-buttons input[type="radio"]:checked + label {
+  background-color: #9BCDD2;
+  border: 1px solid #000;
 }
 
 
