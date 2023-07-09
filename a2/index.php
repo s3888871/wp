@@ -121,14 +121,14 @@
                   <img src="/~s3888871/media/Barbie-poster.PNG" alt="Barbie Poster">
                </div>
                <div>
-                  <p>Barbie Story Synopsis. Replace and add full synopsis</p>
+                  <p>Barbie suffers a crisis that leads her to question her world and her existence.</p>
                   <ul>
-                     <li> 10 July 2023 - 10 am</li>
-                     <li> 11 July 2023 - 10 am</li>
-                     <li> 12 July 2023 - 10 am</li>
-                     <li> 13 July 2023 - 10 am</li>
+                      <li> Monday - 10 am</li>
+                     <li> Tuesday - 10 am</li>
+                     <li> Wednesday - 10 am</li>
+                     <li> Friday - 10 am</li>
                   </ul>
-                  <a href="booking.php?movie=ACT">Book Now</a>
+                  <a href="booking.php?movie=RMC">Book Now</a>
                </div>
             </div>
             <div class="movie-panel" tabindex="1">
@@ -140,14 +140,14 @@
                   <img src="/~s3888871/media/Oppenheimer-poster.PNG" alt="oppenheimer Poster">
                </div>
                <div>
-                  <p>Oppenheimer Story Synopsis. Replace and add full synopsis</p>
+                  <p>Oppenheimer is an upcoming biographical thriller film written, produced, and directed by Christopher Nolan, based on the 2005 book American Prometheus by Kai Bird and Martin J. Sherwin, about J. Robert Oppenheimer, the theoretical physicist who helped develop the first nuclear weapons.</p>
                   <ul>
-                     <li> 10 July 2023 - 10 am</li>
-                     <li> 11 July 2023 - 10 am</li>
-                     <li> 12 July 2023 - 10 am</li>
-                     <li> 13 July 2023 - 10 am</li>
+                      <li> Monday - 10 am</li>
+                     <li> Tuesday - 10 am</li>
+                     <li> Wednesday - 10 am</li>
+                     <li> Friday - 10 am</li>
                   </ul>
-                  <a href="booking.php?movie=ACT">Book Now</a>
+                  <a href="booking.php?movie=DRM">Book Now</a>
                </div>
             </div>
             <div class="movie-panel" tabindex="2">
@@ -159,17 +159,18 @@
                   <img src="/~s3888871/media/indiana-jones-poster.PNG" alt="indiana Poster">
                </div>
                <div>
-                  <p>Indiana Jones Story Synopsis. Replace and add full synopsis</p>
+                  <p>Archaeologist Indiana Jones races against time to retrieve a legendary artifact that can change the course of history.
+                    </p>
                   <ul>
-                     <li> 10 July 2023 - 10 am</li>
-                     <li> 11 July 2023 - 10 am</li>
-                     <li> 12 July 2023 - 10 am</li>
-                     <li> 13 July 2023 - 10 am</li>
+                      <li> Monday - 10 am</li>
+                     <li> Tuesday - 10 am</li>
+                     <li> Wednesday - 10 am</li>
+                     <li> Friday - 10 am</li>
                   </ul>
                   <a href="booking.php?movie=ACT">Book Now</a>
                </div>
             </div>
-            <div class="movie-panel" tabindex="3">
+            <div class="movie-panel" tabindex="3" >
                <div>
                   <div class="title-rating">
                      <h3>Teenage Mutant Ninja Turtles.</h3>
@@ -178,14 +179,14 @@
                   <img src="/~s3888871/media/TMNT-poster.PNG" alt="TMNT Poster">
                </div>
                <div>
-                  <p>TMNT Story Synopsis. Replace and add full synopsis</p>
+                  <p>After years of being sheltered from the human world, the Turtle brothers set out to win the hearts of New Yorkers and be accepted as normal teenagers. Their new friend, April O'Neil, helps them take on a mysterious crime syndicate, but they soon get in over their heads when an army of mutants is unleashed upon them.</p>
                   <ul>
-                     <li> 10 July 2023 - 10 am</li>
-                     <li> 11 July 2023 - 10 am</li>
-                     <li> 12 July 2023 - 10 am</li>
-                     <li> 13 July 2023 - 10 am</li>
+                     <li> Monday - 10 am</li>
+                     <li> Tuesday - 10 am</li>
+                     <li> Wednesday - 10 am</li>
+                     <li> Friday - 10 am</li>
                   </ul>
-                  <a href="booking.php?movie=ACT">Book Now</a>
+                  <a href="booking.php?movie=ANM">Book Now</a>
                </div>
             </div>
          </section>
