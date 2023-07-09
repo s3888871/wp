@@ -20,7 +20,7 @@
       </nav>
       <h2>Barbie Booking</h2>
       <main>
-         <form action="booking.php" method="POST">
+         <form action="booking.php" method="POST" >
             <div class="radio-buttons">
                <div class ="column">
                   <input type="radio" id="mon1" name="day" value="mon-11am" data-pricing="discprice" hidden>
@@ -116,11 +116,11 @@
                </div>
             </div>
             <div class="first-class-seating">
-               <h3>Standard Seating Tickets</h3>
+               <h3>First Class Seating Tickets</h3>
                <div>
                   <br>
-                  <label for="firstClassSeats">First Class Adult Seats:</label>
-                  <select name="seats[FCA]" data-fullprice="21.5" data-discprice="16">
+                  <label for="firstClassAdultSeats">First Class Adult Seats:</label>
+                  <select name="seats[FCA]" data-fullprice="31" data-discprice="25">
                      <option value="">Please select</option>
                      <option value="0">0</option>
                      <option value="1">1</option>
@@ -132,8 +132,8 @@
                </div>
                <div>
                   <br>
-                  <label for="standardConcessionSeats">First Class Concession Seats:</label>
-                  <select name="seats[FCP]" data-fullprice="19" data-discprice="14.5">
+                  <label for="firstClassConcessionSeats">First Class Concession Seats:</label>
+                  <select name="seats[FCP]" data-fullprice="28" data-discprice="23.5">
                      <option value="">Please select</option>
                      <option value="0">0</option>
                      <option value="1">1</option>
@@ -146,7 +146,7 @@
                <div>
                   <br>
                   <label for="firstClassChildSeats">First Class Child Seats:</label>
-                  <select name="seats[FCC]" data-fullprice="17.5" data-discprice="13">
+                  <select name="seats[FCC]" data-fullprice="25" data-discprice="22">
                      <option value="">Please select</option>
                      <option value="0">0</option>
                      <option value="1">1</option>
