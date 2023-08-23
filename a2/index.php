@@ -8,6 +8,7 @@
       <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
       <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
       <script src='../wireframe.js'></script>
+      <script src='../wp/a3/script.js'></script>
    </head>
    <body>
       <header>
@@ -195,6 +196,14 @@
          <div>
             &copy;<script>
                document.write(new Date().getFullYear());
+               document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    const navLinks = document.querySelectorAll('nav a');
+                    navLinks.forEach(link => link.classList.remove('current'));
+
+                    event.currentTarget.classList.add('current');
+                });
+            });
             </script>Joshua Telfer, S3888871. GitHub: https://github.com/s3888871/wp Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
          </div>
          <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>

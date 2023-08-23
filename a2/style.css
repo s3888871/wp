@@ -311,3 +311,7 @@ iframe {
     width: 100%;
     height: 100%;
 }
+
+.current {
+    color: #FF78C4;
+    font-weight: bold;
