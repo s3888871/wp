@@ -1,24 +1,37 @@
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
 
-window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('main section');
-    sections.forEach((section) => {
-        if (isInViewport(section)) {
-            const navLinks = document.querySelectorAll('nav a');
-            navLinks.forEach(link => link.classList.remove('current'));
+    function resetLinks() {
+        navLinks.forEach(link => link.classList.remove("current"));
+    }
 
-            const navLink = document.querySelector(`nav a[href="#${section.id}"]`);
-            if (navLink) {
-                navLink.classList.add('current');
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                resetLinks();
+                const id = entry.target.getAttribute("id");
+                const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+                if (activeLink) {
+                    activeLink.classList.add("current");
+                }
             }
-        }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    sections.forEach(section => observer.observe(section));
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            resetLinks();
+            this.classList.add("current");
+            const targetSection = document.querySelector(this.getAttribute("href"));
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: "smooth" });
+            }
+        });
     });
 });

@@ -8,7 +8,7 @@
       <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
       <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
       <script src='../wireframe.js'></script>
-      <script src='../wp/a3/script.js'></script>
+      <script src="../a3/script.js"></script>
    </head>
    <body>
       <header>
@@ -17,9 +17,9 @@
          <h1>Lunardo Cinema</h1>
       </header>
       <nav id="navbar">
-         <a href="#about-us">About Us</a>
-         <a href="#seats-prices">New Seats</a>
-         <a href="#now-showing">Now Showing</a>
+         <a href="#about-us" class="nav-link">About Us</a>
+         <a href="#seats-prices" class="nav-link">New Seats</a>
+         <a href="#now-showing" class="nav-link">Now Showing</a>
       </nav>
       <main>
          <section id="about-us">
@@ -196,14 +196,6 @@
          <div>
             &copy;<script>
                document.write(new Date().getFullYear());
-               document.querySelectorAll('nav a').forEach(link => {
-                link.addEventListener('click', function(event) {
-                    const navLinks = document.querySelectorAll('nav a');
-                    navLinks.forEach(link => link.classList.remove('current'));
-
-                    event.currentTarget.classList.add('current');
-                });
-            });
             </script>Joshua Telfer, S3888871. GitHub: https://github.com/s3888871/wp Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
          </div>
          <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
