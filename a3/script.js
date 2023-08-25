@@ -36,39 +36,63 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdowns = document.querySelectorAll('select');
-    dropdowns.forEach(dropdown => {
-        dropdown.addEventListener('change', calculateTotal);
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Event listeners to listen for changes in the radio buttons or drop downs
+    let radios = document.querySelectorAll('input[name="day"]');
+
+    radios.forEach(function(radio) {
+        radio.addEventListener('change', calculateTotal);
+    });
+
+    let selects = document.querySelectorAll('select');
+    selects.forEach(function(select) {
+        select.addEventListener('change', calculateTotal);
     });
 
     function calculateTotal() {
-        let totalPrice = 0.0;
-        const    pricingPolicy = document.querySelector('[data-pricing-policy]').getAttribute('data-pricing-policy');
-
-        dropdowns.forEach(dropdown => {
-            if (dropdown.getAttribute('name').includes('seat')) {
-                const seatCount = parseInt(dropdown.value, 10);
-                const unitPrice = parseFloat(dropdown.getAttribute(`data-price-${pricingPolicy}`));
-                totalPrice += seatCount * unitPrice;
-            }
-        });
-        const daySelected = document.querySelector('select[name="day"]').value;
-        const totalPriceDisplay = document.querySelector('#totalPrice');
-
-        if (totalPrice > 0 && daySelected) {
-            totalPriceDisplay.textContent = `$${totalPrice.toFixed(2)}`;
-        } else {
-            totalPriceDisplay.textContent = '';
+        let total = 0;
+        let pricingPolicy = getSelectedPricingPolicy();
+        if (!pricingPolicy) {
+            document.getElementById('totalPrice').textContent = '$0';
+            return;
         }
-        const form = document.querySelector('form');
-        form.addEventListener('submit', function(event) {
-            if (totalPrice === 0 || !daySelected) {
-                event.preventDefault();
-                alert('Please select a day and at least one seat.');
+
+        selects.forEach(function(select) {
+            if (select.value !== "") {  // Check if a value is selected
+                let price = parseFloat(select.getAttribute(pricingPolicy));
+                let qty = parseInt(select.value, 10);
+                total += price * qty;
             }
         });
+
+        if (total > 0) {
+            document.getElementById('totalPrice').textContent = '$' + total.toFixed(2);
+        } else {
+            document.getElementById('totalPrice').textContent = '';
+        }
+
+        checkFormSubmission();
     }
 
+    function getSelectedPricingPolicy() {
+        let selectedRadio = [...radios].find(radio => radio.checked);
+        if (!selectedRadio) return null;
+
+        return selectedRadio.getAttribute('data-pricing') === 'fullprice' ? 'data-price-full' : 'data-price-discount';
+    }
+
+    function checkFormSubmission() {
+        let total = parseFloat(document.getElementById('totalPrice').textContent.replace('$', '')) || 0;
+        let submitButtons = document.querySelectorAll('button[type="submit"]');
+        submitButtons.forEach(button => {
+            button.disabled = !getSelectedPricingPolicy() || total === 0;
+        });
+    }
 });
+
+
+
+
 

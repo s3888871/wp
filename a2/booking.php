@@ -190,117 +190,21 @@
                      </select>
                   </div>
                </div>
-             </form>
-            <form action="booking.php" method="POST" class="center-form">
-                  <!-- Standard Seating Selection -->
-                  <div class="standard-seating">
-                     <h3>Standard Seating Tickets</h3>
-                     <label for="standardAdultSeats">Standard Adult Seats:</label>
-                     <select name="seats[STA]" data-price-full="21.5" data-price-discount="16">
-                        <option value="">Please select</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                     </select>
-                     <label for="standardConcessionSeats">Standard Concession Seats:</label>
-                     <select name="seats[STP]" data-price-full="19" data-price-discount="14.5">
-                        <option value="">Please select</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                     </select>
-                     <label for="standardChildSeats">Standard Child Seats:</label>
-                     <select name="seats[STC]" data-price-full="17.5" data-price-discount="13">
-                        <option value="">Please select</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                     </select>
-                  </div>
-                  <!-- First Class Seating Selection -->
-                  <div class="first-class-seating">
-                     <h3>First Class Seating Tickets</h3>
-                     <label for="firstClassAdultSeats">First Class Adult Seats:</label>
-                     <select name="seats[FCA]" data-price-full="31" data-price-discount="25">
-                        <option value="">Please select</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                     </select>
-                     <label for="firstClassConcessionSeats">First Class Concession Seats:</label>
-                     <select name="seats[FCP]" data-price-full="28" data-price-discount="23.5">
-                        <option value="">Please select</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                     </select>
-                     <label for="firstClassChildSeats">First Class Child Seats:</label>
-                     <select name="seats[FCC]" data-price-full="25" data-price-discount="22">
-                        <option value="">Please select</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                     </select>
-                  </div>
-                  <!-- Customer Details and Submission -->
+               <div class="customer-details">
+                  <input type="hidden" name="movie" value="RMC">
+                  <input type="text" name="customer[name]" required placeholder="Full Name" pattern="^[a-zA-Z\s]*$">
+                  <input type="email" name="customer[email]" required placeholder="Email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,6}$">
+                  <input type="tel" name="customer[mobile]" required placeholder="Mobile Number" pattern="^04\s*\d(?:\s?\d){7}$">
+                  <input type="checkbox" id="rememberMe" hidden>
+                  <label for="rememberMe" class="button" id="rememberMeLabel">Remember Me</label>
+                  <div>
+                     <div id="totalPrice">Total Price: $0</div>
 
-                  <div class="customer-details">
-                    <input type="hidden" name="movie" value="RMC">
-                    <input type="text" name="customer[name]" required placeholder="Full Name" pattern="^[a-zA-Z\s]*$">
-                    <input type="email" name="customer[email]" required placeholder="Email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,6}$">
-                    <input type="tel" name="customer[mobile]" required placeholder="Mobile Number" pattern="^04\s*\d(?:\s?\d){7}$">
-                   <input type="checkbox" id="rememberMe" hidden>
-                <label for="rememberMe" class="button" id="rememberMeLabel">Remember Me</label>
-                <button type="submit">Submit</button>
-                <div>
-                        Total Price: <span id="totalPrice"></span>
-                     </div>
-                     <button type="submit">Submit</button>
                   </div>
+                  <button type="submit">Submit</button>
                </div>
-            </form>
+         </div>
+         </form>
          </div>
       </main>
       <footer>
@@ -338,7 +242,9 @@
                         rememberMeLabel.textContent = "Remember Me";
                     }
                 });
-            });
+               });
+
+
             </script>Joshua Telfer, S3888871. GitHub: https://github.com/s3888871/wp Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
          </div>
          <div>Disclaimer:This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
