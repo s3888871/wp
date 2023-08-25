@@ -8,7 +8,7 @@
       <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
       <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
       <script src='../wireframe.js'></script>
-      <script src='../wp/a3/script.js'></script>
+      <script src='../a3/script.js'></script>
    </head>
    <body>
       <header>
@@ -87,7 +87,7 @@
                   <div>
                      <br>
                      <label for="standardAdultSeats">Standard Adult Seats:</label>
-                     <select name="seats[STA]" data-fullprice="21.5" data-discprice="16">
+                     <select name="seats[STA]" data-price-full="21.5" data-price-discount="16">
                         <option value="">Please select</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -104,7 +104,7 @@
                   <div>
                      <br>
                      <label for="standardConcessionSeats">Standard Concession Seats:</label>
-                     <select name="seats[STP]" data-fullprice="19" data-discprice="14.5">
+                     <select name="seats[STP]" data-price-full="19" data-price-discount="14.5">
                         <option value="">Please select</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -121,7 +121,7 @@
                   <div>
                      <br>
                      <label for="standardChildSeats">Standard Child Seats:</label>
-                     <select name="seats[STC]" data-fullprice="17.5" data-discprice="13">
+                     <select name="seats[STC]" data-price-full="17.5" data-price-discount="13">
                         <option value="">Please select</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -141,7 +141,7 @@
                   <div>
                      <br>
                      <label for="firstClassAdultSeats">First Class Adult Seats:</label>
-                     <select name="seats[FCA]" data-fullprice="31" data-discprice="25">
+                     <select name="seats[FCA]" data-price-full="31" data-price-discount="25">
                         <option value="">Please select</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -158,7 +158,7 @@
                   <div>
                      <br>
                      <label for="firstClassConcessionSeats">First Class Concession Seats:</label>
-                     <select name="seats[FCP]" data-fullprice="28" data-discprice="23.5">
+                     <select name="seats[FCP]" data-price-full="28" data-price-discount="23.5">
                         <option value="">Please select</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -175,7 +175,7 @@
                   <div>
                      <br>
                      <label for="firstClassChildSeats">First Class Child Seats:</label>
-                     <select name="seats[FCC]" data-fullprice="25" data-discprice="22">
+                     <select name="seats[FCC]" data-price-full="25" data-price-discount="22">
                         <option value="">Please select</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -190,13 +190,115 @@
                      </select>
                   </div>
                </div>
-               <div>
-                  <br>
-                  <input type="hidden" name="movie" value="RMC">
-                  <input type="text" name="customer[name]" required placeholder="Full Name">
-                  <input type="email" name="customer[email]" required placeholder="Email">
-                  <input type="tel" name="customer[mobile]" required placeholder="Mobile Number" pattern="[0-9]{10}">
-                  <button type="submit">Submit</button>
+             </form>
+            <form action="booking.php" method="POST" class="center-form">
+                  <!-- Standard Seating Selection -->
+                  <div class="standard-seating">
+                     <h3>Standard Seating Tickets</h3>
+                     <label for="standardAdultSeats">Standard Adult Seats:</label>
+                     <select name="seats[STA]" data-price-full="21.5" data-price-discount="16">
+                        <option value="">Please select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                     </select>
+                     <label for="standardConcessionSeats">Standard Concession Seats:</label>
+                     <select name="seats[STP]" data-price-full="19" data-price-discount="14.5">
+                        <option value="">Please select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                     </select>
+                     <label for="standardChildSeats">Standard Child Seats:</label>
+                     <select name="seats[STC]" data-price-full="17.5" data-price-discount="13">
+                        <option value="">Please select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                     </select>
+                  </div>
+                  <!-- First Class Seating Selection -->
+                  <div class="first-class-seating">
+                     <h3>First Class Seating Tickets</h3>
+                     <label for="firstClassAdultSeats">First Class Adult Seats:</label>
+                     <select name="seats[FCA]" data-price-full="31" data-price-discount="25">
+                        <option value="">Please select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                     </select>
+                     <label for="firstClassConcessionSeats">First Class Concession Seats:</label>
+                     <select name="seats[FCP]" data-price-full="28" data-price-discount="23.5">
+                        <option value="">Please select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                     </select>
+                     <label for="firstClassChildSeats">First Class Child Seats:</label>
+                     <select name="seats[FCC]" data-price-full="25" data-price-discount="22">
+                        <option value="">Please select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                     </select>
+                  </div>
+                  <!-- Customer Details and Submission -->
+
+                  <div class="customer-details">
+                    <input type="hidden" name="movie" value="RMC">
+                    <input type="text" name="customer[name]" required placeholder="Full Name" pattern="^[a-zA-Z\s]*$">
+                    <input type="email" name="customer[email]" required placeholder="Email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,6}$">
+                    <input type="tel" name="customer[mobile]" required placeholder="Mobile Number" pattern="^\d{10}$">
+                   <input type="checkbox" id="rememberMe" hidden>
+                <label for="rememberMe" class="button" id="rememberMeLabel">Remember Me</label>
+                <button type="submit">Submit</button>
+                <div>
+                        Total Price: <span id="totalPrice"></span>
+                     </div>
+                     <button type="submit">Submit</button>
+                  </div>
                </div>
             </form>
          </div>
@@ -205,10 +307,43 @@
          <div>
             &copy;<script>
                document.write(new Date().getFullYear());
+               document.addEventListener('DOMContentLoaded', function() {
+    const nameField = document.querySelector('input[name="customer[name]"]');
+    const emailField = document.querySelector('input[name="customer[email]"]');
+    const mobileField = document.querySelector('input[name="customer[mobile]"]');
+    const rememberMeCheckbox = document.getElementById('rememberMe');
+    const rememberMeLabel = document.getElementById('rememberMeLabel');
+
+    // Check if details exist in localStorage
+    if (localStorage.getItem('customerName')) {
+        nameField.value = localStorage.getItem('customerName');
+        emailField.value = localStorage.getItem('customerEmail');
+        mobileField.value = localStorage.getItem('customerMobile');
+        rememberMeCheckbox.checked = true;
+        rememberMeLabel.textContent = "Forget Me";
+    } else {
+        rememberMeLabel.textContent = "Remember Me";
+    }
+
+    rememberMeLabel.addEventListener('click', function() {
+        if (rememberMeCheckbox.checked) {
+            localStorage.setItem('customerName', nameField.value);
+            localStorage.setItem('customerEmail', emailField.value);
+            localStorage.setItem('customerMobile', mobileField.value);
+            rememberMeLabel.textContent = "Forget Me";
+        } else {
+            localStorage.removeItem('customerName');
+            localStorage.removeItem('customerEmail');
+            localStorage.removeItem('customerMobile');
+            rememberMeLabel.textContent = "Remember Me";
+        }
+    });
+});
+
 
             </script>Joshua Telfer, S3888871. GitHub: https://github.com/s3888871/wp Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
          </div>
-         <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
+         <div>Disclaimer:This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
          <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
       </footer>
       <aside id="debug">
