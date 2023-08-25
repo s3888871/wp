@@ -290,7 +290,7 @@
                     <input type="hidden" name="movie" value="RMC">
                     <input type="text" name="customer[name]" required placeholder="Full Name" pattern="^[a-zA-Z\s]*$">
                     <input type="email" name="customer[email]" required placeholder="Email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,6}$">
-                    <input type="tel" name="customer[mobile]" required placeholder="Mobile Number" pattern="^\d{10}$">
+                    <input type="tel" name="customer[mobile]" required placeholder="Mobile Number" pattern="^04\s*\d(?:\s?\d){7}$">
                    <input type="checkbox" id="rememberMe" hidden>
                 <label for="rememberMe" class="button" id="rememberMeLabel">Remember Me</label>
                 <button type="submit">Submit</button>
@@ -307,40 +307,38 @@
          <div>
             &copy;<script>
                document.write(new Date().getFullYear());
-               document.addEventListener('DOMContentLoaded', function() {
-    const nameField = document.querySelector('input[name="customer[name]"]');
-    const emailField = document.querySelector('input[name="customer[email]"]');
-    const mobileField = document.querySelector('input[name="customer[mobile]"]');
-    const rememberMeCheckbox = document.getElementById('rememberMe');
-    const rememberMeLabel = document.getElementById('rememberMeLabel');
+                           document.addEventListener('DOMContentLoaded', function() {
+                const nameField = document.querySelector('input[name="customer[name]"]');
+                const emailField = document.querySelector('input[name="customer[email]"]');
+                const mobileField = document.querySelector('input[name="customer[mobile]"]');
+                const rememberMeCheckbox = document.getElementById('rememberMe');
+                const rememberMeLabel = document.getElementById('rememberMeLabel');
 
-    // Check if details exist in localStorage
-    if (localStorage.getItem('customerName')) {
-        nameField.value = localStorage.getItem('customerName');
-        emailField.value = localStorage.getItem('customerEmail');
-        mobileField.value = localStorage.getItem('customerMobile');
-        rememberMeCheckbox.checked = true;
-        rememberMeLabel.textContent = "Forget Me";
-    } else {
-        rememberMeLabel.textContent = "Remember Me";
-    }
+                // Check if details exist in localStorage
+                if (localStorage.getItem('customerName')) {
+                    nameField.value = localStorage.getItem('customerName');
+                    emailField.value = localStorage.getItem('customerEmail');
+                    mobileField.value = localStorage.getItem('customerMobile');
+                    rememberMeCheckbox.checked = true;
+                    rememberMeLabel.textContent = "Forget Me";
+                } else {
+                    rememberMeLabel.textContent = "Remember Me";
+                }
 
-    rememberMeLabel.addEventListener('click', function() {
-        if (rememberMeCheckbox.checked) {
-            localStorage.setItem('customerName', nameField.value);
-            localStorage.setItem('customerEmail', emailField.value);
-            localStorage.setItem('customerMobile', mobileField.value);
-            rememberMeLabel.textContent = "Forget Me";
-        } else {
-            localStorage.removeItem('customerName');
-            localStorage.removeItem('customerEmail');
-            localStorage.removeItem('customerMobile');
-            rememberMeLabel.textContent = "Remember Me";
-        }
-    });
-});
-
-
+                rememberMeLabel.addEventListener('click', function() {
+                    if (rememberMeCheckbox.checked) {
+                        localStorage.setItem('customerName', nameField.value);
+                        localStorage.setItem('customerEmail', emailField.value);
+                        localStorage.setItem('customerMobile', mobileField.value);
+                        rememberMeLabel.textContent = "Forget Me";
+                    } else {
+                        localStorage.removeItem('customerName');
+                        localStorage.removeItem('customerEmail');
+                        localStorage.removeItem('customerMobile');
+                        rememberMeLabel.textContent = "Remember Me";
+                    }
+                });
+            });
             </script>Joshua Telfer, S3888871. GitHub: https://github.com/s3888871/wp Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
          </div>
          <div>Disclaimer:This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
