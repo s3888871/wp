@@ -37,6 +37,10 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+function selectMovie(movieCode) {
+    document.getElementById('selectedMovieInput').value = movieCode;
+}
+
 
 document.addEventListener("DOMContentLoaded", function() {
     // Event listeners to listen for changes in the radio buttons or drop downs

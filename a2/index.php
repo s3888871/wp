@@ -1,3 +1,6 @@
+<?php
+include 'tools.php';
+?>
 <!DOCTYPE html>
 <html lang='en'>
    <head>
@@ -112,85 +115,31 @@
             </div>
          </section>
          <section id="now-showing" class="clearfix">
-            <h2>Now Showing</h2>
-            <div class="movie-panel" tabindex="0">
-               <div>
-                  <div class="title-rating">
-                     <h3>Barbie.</h3>
-                     <h4>Rating: PG</h4>
-                  </div>
-                  <img src="/~s3888871/media/Barbie-poster.PNG" alt="Barbie Poster">
-               </div>
-               <div>
-                  <p>Barbie suffers a crisis that leads her to question her world and her existence.</p>
-                  <ul>
-                      <li> Monday - 10 am</li>
-                     <li> Tuesday - 10 am</li>
-                     <li> Wednesday - 10 am</li>
-                     <li> Friday - 10 am</li>
-                  </ul>
-                  <a href="booking.php?movie=RMC">Book Now</a>
-               </div>
+    <h2>Now Showing</h2>
+
+    <?php foreach ($moviesObject as $code => $moviesObject): ?>
+        <div class="movie-panel" tabindex="0">
+            <div>
+                <div class="title-rating">
+                    <h3><?php echo $movie['title']; ?></h3>
+                    <h4>Rating: <?php echo $movie['rating']; ?></h4>
+                </div>
+                <img src="<?php echo $movie['image']; ?>" alt="<?php echo $movie['title']; ?> Poster">
             </div>
-            <div class="movie-panel" tabindex="1">
-               <div>
-                  <div class="title-rating">
-                     <h3>Oppenheimer.</h3>
-                     <h4>Rating: PG</h4>
-                  </div>
-                  <img src="/~s3888871/media/Oppenheimer-poster.PNG" alt="oppenheimer Poster">
-               </div>
-               <div>
-                  <p>Oppenheimer is an upcoming biographical thriller film written, produced, and directed by Christopher Nolan, based on the 2005 book American Prometheus by Kai Bird and Martin J. Sherwin, about J. Robert Oppenheimer, the theoretical physicist who helped develop the first nuclear weapons.</p>
-                  <ul>
-                      <li> Monday - 10 am</li>
-                     <li> Tuesday - 10 am</li>
-                     <li> Wednesday - 10 am</li>
-                     <li> Friday - 10 am</li>
-                  </ul>
-                  <a href="booking.php?movie=DRM">Book Now</a>
-               </div>
+            <div>
+                <p><?php echo $movie['description']; ?></p>
+                <ul>
+                    <?php foreach ($movie['schedule'] as $time): ?>
+                        <li><?php echo $time; ?></li>
+                    <?php endforeach; ?>
+                </ul>
+                <a href="booking.php?movie=<?php echo $code; ?>">Book Now</a>
             </div>
-            <div class="movie-panel" tabindex="2">
-               <div>
-                  <div class="title-rating">
-                     <h3>Indiana Jones.</h3>
-                     <h4>Rating: M</h4>
-                  </div>
-                  <img src="/~s3888871/media/indiana-jones-poster.PNG" alt="indiana Poster">
-               </div>
-               <div>
-                  <p>Archaeologist Indiana Jones races against time to retrieve a legendary artifact that can change the course of history.
-                    </p>
-                  <ul>
-                      <li> Monday - 10 am</li>
-                     <li> Tuesday - 10 am</li>
-                     <li> Wednesday - 10 am</li>
-                     <li> Friday - 10 am</li>
-                  </ul>
-                  <a href="booking.php?movie=ACT">Book Now</a>
-               </div>
-            </div>
-            <div class="movie-panel" tabindex="3" >
-               <div>
-                  <div class="title-rating">
-                     <h3>Teenage Mutant Ninja Turtles.</h3>
-                     <h4>Rating: PG</h4>
-                  </div>
-                  <img src="/~s3888871/media/TMNT-poster.PNG" alt="TMNT Poster">
-               </div>
-               <div>
-                  <p>After years of being sheltered from the human world, the Turtle brothers set out to win the hearts of New Yorkers and be accepted as normal teenagers. Their new friend, April O'Neil, helps them take on a mysterious crime syndicate, but they soon get in over their heads when an army of mutants is unleashed upon them.</p>
-                  <ul>
-                     <li> Monday - 10 am</li>
-                     <li> Tuesday - 10 am</li>
-                     <li> Wednesday - 10 am</li>
-                     <li> Friday - 10 am</li>
-                  </ul>
-                  <a href="booking.php?movie=ANM">Book Now</a>
-               </div>
-            </div>
-         </section>
+        </div>
+    <?php endforeach; ?>
+
+</section>
+
       </main>
       <footer>
          <div>
