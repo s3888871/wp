@@ -6,7 +6,7 @@ if (isset($_GET['movie'])) {
 } elseif (isset($_POST['movie'])) {
     $movieCode = $_POST['movie'];
 } else {
-    die("No movie selected.");
+    die("No movie selected. tools");
 }
 
 function isValidMovie($movie) {
@@ -110,6 +110,7 @@ $days = [
       'rating' => 'PG-13',
       'genre' => 'Action, Animation',
       'summary' => 'After years of being sheltered from the human world, the Turtle brothers set out to win the hearts of New Yorkers and be accepted as normal teenagers. Their new friend, April ONeil, helps them take on a mysterious crime syndicate, but they soon get in over their heads when an army of mutants is unleashed upon them.',
+      'starring' => 'Jackie Chan, Nicolas Cantu, John Cena',
       'plot' => 'After years of being sheltered from the human world, the Turtle brothers set out to win the hearts of New Yorkers and be accepted as normal teenagers. Their new friend, April ONeil, helps them take on a mysterious crime syndicate, but they soon get in over their heads when an army of mutants is unleashed upon them.',
       'imdb' => 'tt1462764',
       'screening-summary' => 'Monday - Tuesday: 9pm, Wednesday - Friday: 9pm, Saturday - Sunday: 6pm',
