@@ -1,23 +1,40 @@
 <?php
 include 'tools.php';
 
+// Initialize variables
+$gst = 0;
+$totalPrice = 0;
+
+
+if (isset($_POST['day'])) {
+    list($dayTime, $rate) = explode(',', $_POST['day']);
+    list($day, $time) = explode('-', $dayTime);
+} else {
+    die("Day and rate not provided.");
+}
+
 // Check if movie code is set and valid
 if (isset($_POST['movie']) && isValidMovie($_POST['movie'])) {
     $seatPrices = [
-        'STA' => ['full' => 21.5, 'discount' => 16],
-        'STP' => ['full' => 19, 'discount' => 14.5],
-        'STC' => ['full' => 17.5, 'discount' => 13],
-        'FCA' => ['full' => 31, 'discount' => 25],
-        'FCP' => ['full' => 28, 'discount' => 23.5],
-        'FCC' => ['full' => 25, 'discount' => 22],
+        'STA' => ['fullprice' => 21.5, 'discprice' => 16],
+        'STP' => ['fullprice' => 19, 'discprice' => 14.5],
+        'STC' => ['fullprice' => 17.5, 'discprice' => 13],
+        'FCA' => ['fullprice' => 31, 'discprice' => 25],
+        'FCP' => ['fullprice' => 28, 'discprice' => 23.5],
+        'FCC' => ['fullprice' => 25, 'discprice' => 22],
     ];
 
     $totalPrice = 0;
 
     // Calculate total price based on seat quantities and prices
     foreach ($_POST['seats'] as $seatType => $quantity) {
-        $rate = $_POST['day']['rate'] === 'discount' ? 'discount' : 'full';
-        $totalPrice += $seatPrices[$seatType][$rate] * $quantity;
+        $priceRate = $rate === 'discprice' ? 'discprice' : 'fullprice';
+        $quantity = intval($quantity);
+        if (isset($seatPrices[$seatType][$priceRate])) {
+            $totalPrice += $seatPrices[$seatType][$priceRate] * $quantity;
+        }
+        echo "Seat Type: $seatType, Price Rate: $priceRate, Quantity: $quantity<br>";
+
     }
 
     // Calculate GST
@@ -30,8 +47,6 @@ if (isset($_POST['movie']) && isValidMovie($_POST['movie'])) {
         $_POST['customer']['email'],
         $_POST['customer']['mobile'],
         $_POST['movie'],
-        $days[$_POST['day']],
-        $_POST['time'],
         $_POST['seats']['STA'],
         $_POST['seats']['STP'],
         $_POST['seats']['STC'],
@@ -58,6 +73,8 @@ if (isset($_POST['movie']) && isValidMovie($_POST['movie'])) {
    <p> receipt page</p>
    </head>
    <body>
+        <p><?php echo $gst; ?></p>
+        <p><?php echo $totalPrice; ?></p>
    </body>
    <footer>
    </footer>

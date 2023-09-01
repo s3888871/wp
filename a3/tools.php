@@ -1,5 +1,7 @@
 <?php
   session_start();
+list($dayTime, $rate) = explode(',', $_POST['day']);
+
 
 if (isset($_GET['movie'])) {
     $movieCode = $_GET['movie'];
@@ -13,6 +15,8 @@ function isValidMovie($movie) {
     $validMovies = ['RMC', 'ACT', 'ANM', 'DRM'];
     return in_array($movie, $validMovies);
 }
+
+
 
 $days = [
     'MON' => 'Monday',
@@ -187,6 +191,7 @@ $days = [
   ];
 
 $selectedMovie = $movies[$movieCode];
+
 
 
 function displayMoviePanel($movieCode) {
