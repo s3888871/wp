@@ -23,7 +23,6 @@
            'FCC' => ['fullprice' => 25, 'discprice' => 22],
        ];
        $totalPrice = 0;
-
        // Calculate total price based on seat quantities and prices, while also calculating subtotals for each seat seatType
        $subtotalSTA = 0;
        $subtotalSTP = 0;
