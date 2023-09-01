@@ -234,7 +234,6 @@ if (isset($_GET['movie'])) {
                 <input type="submit" value="Retrieve Booking">
             </form>
 
-
       </footer>
       <aside id="debug">
          <hr>

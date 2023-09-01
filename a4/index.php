@@ -201,6 +201,14 @@
          </div>
          <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
          <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+        <h3>Retrieve Your Booking</h3>
+            <form action="currentbookings.php" method="post">
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+                <label for="mobile">Mobile:</label>
+                <input type="text" name="mobile" required>
+                <input type="submit" value="Retrieve Booking">
+            </form>
       </footer>
             <aside id="debug">
          <hr>

@@ -1,7 +1,6 @@
 <?php
    include 'tools.php';
 
-   // Initialize variables
    $gst = 0;
    $totalPrice = 0;
 
@@ -10,7 +9,7 @@
        list($dayTime, $rate) = explode(',', $_POST['day']);
        list($day, $time) = explode('-', $dayTime);
    } else {
-       die("Day and rate not provided.");
+
    }
 
    // Check if movie code is set and valid
@@ -58,6 +57,7 @@
            $_POST['customer']['mobile'],
            $_POST['movie'],
            $time,
+           $day,
            $_POST['seats']['STA'], $subtotalSTA,
            $_POST['seats']['STP'], $subtotalSTP,
            $_POST['seats']['STC'], $subtotalSTC,
@@ -67,11 +67,15 @@
            $totalPrice,
            $gst
        ];
+      if (!isset($_POST['view_only'])) {
+            $file = fopen('bookings.txt', 'a');
+            fputcsv($file, $data);
+            fclose($file);
+        }
+       if (isset($_POST['booking_data'])) {
+        $_SESSION['booking_data'] = unserialize($_POST['booking_data']);
+        }
 
-
-       $file = fopen('bookings.txt', 'a');
-       fputcsv($file, $data);
-       fclose($file);
        $_SESSION['booking_data'] = $_POST;
 
    } else {
@@ -88,12 +92,11 @@
       <script src='../a4/script.js'></script>
    </head>
    <body>
-      <!-- Receipt -->
       <div class="receipt">
          <div class="header">
-            <h1>Company Name</h1>
-            <p>Address: 123 Street, City, Country</p>
-            <p>Email: example@example.com</p>
+            <h1>Lunardo Cinema</h1>
+            <p>Address: 123 Fake Street, Sydney, Australia</p>
+            <p>Email: lunardocinema@cinemas.com</p>
             <p>Phone: +123456789</p>
          </div>
          <div class="customer-details">
@@ -154,26 +157,25 @@
          <div class="footer">
          </div>
       </div>
-      <!-- Ticket(s) -->
       <div class="ticket">
           <?php
                 $seatTypes = ['STA' => 'Standard Adult', 'STP' => 'Standard Concession', 'STC' => 'Standard Child', 'FCA' => 'First Class Adult', 'FCP' => 'First Class Concession', 'FCC' => 'First Class Child'];
-
                 foreach ($_SESSION['booking_data']['seats'] as $seatType => $quantity) {
                     for ($i = 0; $i < $quantity; $i++) {
                         ?>
              <div class="ticket">
                 <h2>Movie Ticket</h2>
                 <p>Seat Type: <?php echo $seatTypes[$seatType]; ?></p>
-                <p>Movie: <?php echo $_SESSION['booking_data']['movie']; ?></p>
-                <p>Time: <?php echo $time; ?></p>
-                <p>Date: <?php echo $day; ?></p>
+                <p>Movie: <?php echo $_SESSION['booking_data']['movie'];?></p>
+                <p>Time: <?php echo $time;?></p>
+                <p>Date: <?php echo $day;?></p>
              </div>
              <?php
                 }
                 }
                 ?>
       </div>
+
    </body>
    <footer>
    </footer>

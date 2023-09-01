@@ -1,6 +1,6 @@
 <?php
   session_start();
-list($dayTime, $rate) = explode(',', $_POST['day']);
+
 
 
 if (isset($_GET['movie'])) {
